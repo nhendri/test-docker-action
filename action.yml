@@ -1,0 +1,12 @@
+name: test-docker-action
+description: A test action to figure out how Docker actions work lolz
+inputs:
+  var01:
+    description: variable 01
+    required: true
+  var02:
+    description: variable 02
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"

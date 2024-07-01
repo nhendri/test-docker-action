@@ -1,0 +1,27 @@
+name: Build and Validate
+
+on:
+    push:
+        branches:
+            - "**"
+    
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    build-validate-image:
+        name: Build the Docker image and validate the entrypoint
+        runs-on: [ ubuntu-latest ]
+        steps:
+            - name: checkout source code
+              uses: actions/checkout@v4
+
+            - name: Build Image
+              run: |
+                docker build -t local/ansible:gha-workflow:latest .
+
+            - name: Prune Image
+              run: |
+                docker rmi -f $(docker images --format "{{.ID}}" local/ansible:gha-workflow:latest) && docker image prune -f
