@@ -13,7 +13,7 @@ permissions:
 jobs:
     build-validate-image:
         name: Build the Docker image and validate the entrypoint
-        runs-on: [ macos-latest ]
+        runs-on: [ ubuntu-latest ]
         steps:
             - name: checkout source code
               uses: actions/checkout@v4
