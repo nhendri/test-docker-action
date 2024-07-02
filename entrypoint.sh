@@ -2,7 +2,7 @@
 
 function main () {
     
-    local PARAM_LIST=(ENV_VAR01 ENV_VAR02)
+    local PARAM_LIST=(INPUT_ENV_VAR01 INPUT_ENV_VAR02)
     local EMPTY_PARAMS=0
 
     for PARAM in ${PARAM_LIST[*]}; do
@@ -27,7 +27,7 @@ function main () {
         exit 1
     fi
 
-    printf "var01: $ENV_VAR01 | var02: $ENV_VAR02\n"
+    printf "var01: $INPUT_ENV_VAR01 | var02: $INPUT_ENV_VAR02\n"
 }
 
 main
