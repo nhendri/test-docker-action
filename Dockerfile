@@ -1,4 +1,4 @@
-FROM ghcr.io/nhendri/test-image:0.1-x64
+FROM redhat/ubi8
 
 COPY entrypoint.sh /entrypoint.sh
 
