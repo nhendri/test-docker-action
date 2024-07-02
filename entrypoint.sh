@@ -2,14 +2,6 @@
 
 function main () {
     
-    which ansible > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-    printf "ERROR   ansible not found on path. exiting...\n"
-    exit 1
-    else
-        printf "INFO    ansible validated...\n"
-    fi
-    
     local PARAM_LIST=(ENV_VAR01 ENV_VAR02)
     local EMPTY_PARAMS=0
 
