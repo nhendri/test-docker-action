@@ -1,4 +1,4 @@
-FROM ghcr.io/nhendri/devtooling:latest
+FROM ghcr.io/nhendri/test-image:0.1-x64
 
 COPY entrypoint.sh /entrypoint.sh
 
